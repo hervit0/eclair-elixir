@@ -8,6 +8,11 @@ elixir c5.exs
 elixir c6.exs
 ```
 
+### Naive dichotomy
+```
+elixir dicho.exs
+```
+
 ## Hu?
 ```
 iex(3)> i "hello"

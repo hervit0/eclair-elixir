@@ -5,10 +5,7 @@ defmodule T do
   end
 end
 
-<<<<<<< HEAD
 # Named functions
-=======
->>>>>>> 5b96346... About modules
 defmodule Times do
   def double(x) do
     x * 2
@@ -26,7 +23,6 @@ end
 T.is Times.double(2), 4
 T.is Times.triple(2), 6
 T.is Times.quadrule(2), 8
-<<<<<<< HEAD
 
 # Sum
 defmodule Winston do
@@ -45,5 +41,3 @@ end
 T.is Gcd.find(5, 0), 5
 T.is Gcd.find(5, 3), 1
 T.is Gcd.find(15, 5), 5
-=======
->>>>>>> 5b96346... About modules

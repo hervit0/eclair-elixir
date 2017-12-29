@@ -41,3 +41,7 @@ end
 T.is Gcd.find(5, 0), 5
 T.is Gcd.find(5, 3), 1
 T.is Gcd.find(15, 5), 5
+
+# Convert Float to string with two digits
+T.is (Float.to_char_list 42.4533, [decimals: 2, compact: false]), '42.45'
+T.is (Float.to_char_list 42.459, [decimals: 2, compact: false]), '42.46'

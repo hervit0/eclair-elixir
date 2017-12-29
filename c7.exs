@@ -39,3 +39,21 @@ defmodule NewBorn do
 end
 
 IO.puts NewBorn.caesar('ryvkve', 13)
+
+# ListsAndRecursion-3
+defmodule MapOfProblematicSlow do
+  def span(from, to), do: _span(from, to, [from])
+
+  defp _span(to, to, spanList), do: spanList
+  defp _span(from, to, spanList) do
+    _span(from + 1, to, spanList ++ [from +  1])
+  end
+end
+
+defmodule MapOfProblematic do
+  def span(from, to) when from > to, do: []
+  def span(from, to), do: [ from | span(from + 1, to) ]
+end
+
+T.is(MapOfProblematicSlow.span(1, 5), [1,2,3,4,5])
+T.is(MapOfProblematic.span(1, 5), [1,2,3,4,5])

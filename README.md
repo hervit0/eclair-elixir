@@ -6,6 +6,8 @@ Learning Elixir!
 elixir hello.exs
 elixir c5.exs
 elixir c6.exs
+elixir c7.exs
+elixir c10.exs
 ```
 
 ### Naive dichotomy

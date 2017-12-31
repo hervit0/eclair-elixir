@@ -10,6 +10,18 @@ elixir c7.exs
 elixir c10.exs
 ```
 
+## Issues Github thing
+Have to be run at the root of `issues`:
+
+```
+mix run -e 'Issues.Cli.run(["-h"])'
+```
+
+Open a console:
+```
+iex -S mix
+```
+
 ### Naive dichotomy
 ```
 elixir dicho.exs

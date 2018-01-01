@@ -15,6 +15,8 @@ Have to be run at the root of `issues`:
 
 ```
 mix run -e 'Issues.Cli.run(["-h"])'
+mix test
+mix escript.build
 ```
 
 Open a console:

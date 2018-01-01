@@ -50,8 +50,8 @@ prefix = fn
 end
 
 mrs = prefix.("Mrs")
-Test.assert mrs.("Woods"), "Mrs Woods"
-Test.assert prefix.("Segnorita").("Monica"), "Segnorita Monica"
+Test.assert mrs.("Smith"), "Mrs Smith"
+Test.assert prefix.("Segnorita").("Maria"), "Segnorita Maria"
 
 # Capture operator
 plusTwo = fn(l) ->

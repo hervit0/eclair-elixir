@@ -1,6 +1,6 @@
 defmodule Issues.Cli do
   @default_count 4
-  def run argv do
+  def main argv do
     argv
       |> parse_args
       |> process
@@ -22,11 +22,12 @@ defmodule Issues.Cli do
     System.halt(0)
   end
 
-  def process {user, project, _count} do
+  def process {user, project, count} do
     Issues.GithubIssues.fetch(user, project)
       |> decode_response
       |> to_hash_dict
       |> order
+      |> Enum.take(count)
   end
 
   def decode_response({:ok, body}), do: body

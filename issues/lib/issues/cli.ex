@@ -26,6 +26,7 @@ defmodule Issues.Cli do
     Issues.GithubIssues.fetch(user, project)
       |> decode_response
       |> to_hash_dict
+      |> order
   end
 
   def decode_response({:ok, body}), do: body
@@ -37,4 +38,9 @@ defmodule Issues.Cli do
   end
 
   def to_hash_dict(issues), do: issues |> Enum.map(&Enum.into(&1, HashDict.new))
+
+  def order(issues) do
+    Enum.sort issues,
+      fn issue1, issue2 -> issue1["created_at"] <= issue2["created_at"] end
+  end
 end

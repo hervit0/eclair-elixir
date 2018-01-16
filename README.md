@@ -1,4 +1,4 @@
-# Unrust-elixir
+# Eclair Elixir
 
 Learning Elixir:
 - `programming_elixir`: exercises from `Programming Elixir` (Dave Thomas)

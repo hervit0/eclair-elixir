@@ -1,4 +1,7 @@
+ExUnit.start()
+
 defmodule CubesTest do
+  Code.require_file("./cubes.ex")
   use ExUnit.Case
 
   def testFindNb(numtest, m, ans) do

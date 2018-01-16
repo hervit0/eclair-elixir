@@ -1,4 +1,7 @@
+ExUnit.start()
+
 defmodule EvaporatorTest do
+  Code.require_file("./evaporator.ex")
   use ExUnit.Case
 
   test "Evaporator" do

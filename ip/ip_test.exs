@@ -1,4 +1,7 @@
+ExUnit.start()
+
 defmodule IpTest do
+  Code.require_file("./ip.ex")
   use ExUnit.Case
 
   @ips [

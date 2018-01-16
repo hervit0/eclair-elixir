@@ -22,3 +22,9 @@ Examples
 123.045.067.089
 ```
 Note: leading zeros (e.g. `01.02.03.04`) are considered not valid in this kata!
+
+## Run it
+
+```
+elixir ip_test.exs
+```

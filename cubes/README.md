@@ -13,3 +13,9 @@ Examples:
 findNb(1071225) --> 45
 findNb(91716553919377) --> -1
 ```
+
+## Run it
+
+```
+elixir cubes_test.exs
+```

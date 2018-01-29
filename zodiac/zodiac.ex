@@ -17,9 +17,7 @@ defmodule Zodiac do
   }
 
   def get(day, month) do
-    {:ok, day_month} = Date.new(@year, month, day)
-
-    get_sign(day_month)
+    with {:ok, day_month} <- Date.new(@year, month, day), do: get_sign(day_month)
   end
 
   defp get_sign(day_month) do
@@ -31,10 +29,9 @@ defmodule Zodiac do
   end
 
   defp to_date(day_month) do
-    [day, month] = String.split(day_month, "/")
-    {:ok, date} = Date.new(@year, String.to_integer(month), String.to_integer(day))
+    [day, month] = day_month |> String.split("/") |> Enum.map(&String.to_integer(&1))
 
-    date
+    with {:ok, date} <- Date.new(@year, month, day), do: date
   end
 
   defp to_range([head, tail]), do: Date.range(to_date(head), to_date(tail))

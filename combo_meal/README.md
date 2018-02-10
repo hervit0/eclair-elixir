@@ -57,3 +57,5 @@ Case 1: Refer to the problem statement for this case.
 Case 2: The selling price of a burger is , soda is , and combo meal is . If the cost to make a burger is , the cost to make a can of soda is  and the fixed profit is , you can verify the given selling prices as,  and . Hence, the answer is .
 
 Case 3: The selling price of a burger is , soda is , and combo meal is . If the cost to make a burger is , the cost to make a can of soda is  and the fixed profit is , you can verify the given selling prices as,  and . Hence, the answer is .
+
+ <!-- https://stackoverflow.com/questions/37715885/how-do-i-fake-io-input-when-testing-with-exunit -->

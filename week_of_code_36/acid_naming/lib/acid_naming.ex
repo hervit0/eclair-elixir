@@ -8,19 +8,19 @@ defmodule AcidNaming do
     |> Enum.each(fn classification -> IO.puts(classification) end)
   end
 
-  def get_component(), do: IO.gets("") |> String.trim()
+  defp get_component(), do: IO.gets("") |> String.trim()
 
-  def acid_classify(component) do
+  defp acid_classify(component) do
     case fragment(component) do
       {true, true} -> "non-metal acid"
       {false, true} -> "polyatomic acid"
-      {false, false} -> "not an acid"
+      {_, _} -> "not an acid"
     end
   end
 
-  def fragment(component) do
+  defp fragment(component) do
     {String.starts_with?(component, "hydro"), String.ends_with?(component, "ic")}
   end
 end
 
-# AcidNaming.main()
+AcidNaming.main()
